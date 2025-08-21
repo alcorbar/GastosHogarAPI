@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GastosHogarAPI</name>
+    </assembly>
+    <members>
+        <member name="M:GastosHogarAPI.Controllers.AuthController.Login(GastosHogarAPI.Models.DTOs.LoginRequest)">
+            <summary>
+            Login tradicional con PIN
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.AuthController.GoogleLogin(GastosHogarAPI.Models.DTOs.GoogleLoginRequest)">
+            <summary>
+            Login con Google
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.AuthController.AutoLogin(GastosHogarAPI.Models.DTOs.AutoLoginRequest)">
+            <summary>
+            Auto-login para dispositivos conocidos
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.AuthController.BuscarUsuario(System.String)">
+            <summary>
+            Buscar usuario por email
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.AuthController.CambiarPin(GastosHogarAPI.Controllers.CambiarPinRequest)">
+            <summary>
+            Cambiar PIN de usuario
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.AuthController.VerifyToken">
+            <summary>
+            Verificar estado del token actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.CategoriasController.ObtenerCategorias">
+            <summary>
+            Obtener todas las categorías disponibles para el usuario
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.CategoriasController.ObtenerCategoriasPopulares(System.Int32)">
+            <summary>
+            Obtener categorías más usadas por el grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.CategoriasController.CrearCategoria(GastosHogarAPI.Controllers.CrearCategoriaRequest)">
+            <summary>
+            Crear una nueva categoría personalizada para el grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.CategoriasController.ActualizarCategoria(System.Int32,GastosHogarAPI.Controllers.ActualizarCategoriaRequest)">
+            <summary>
+            Actualizar una categoría personalizada del grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.CategoriasController.DesactivarCategoria(System.Int32)">
+            <summary>
+            Desactivar una categoría personalizada del grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.CategoriasController.ObtenerEstadisticas(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Obtener estadísticas de uso de categorías
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.EstadisticasController.ObtenerDashboard">
+            <summary>
+            Dashboard principal con estadísticas del mes actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.EstadisticasController.ObtenerEstadisticasAnuales(System.Int32)">
+            <summary>
+            Estadísticas anuales del grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.EstadisticasController.CompararPeriodos(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Comparación entre múltiples períodos
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.EstadisticasController.ObtenerRanking(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Ranking de usuarios por diferentes métricas
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.EstadisticasController.AnalizarPatrones(System.Int32)">
+            <summary>
+            Análisis de patrones de gasto
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.EstadisticasController.ExportarDatos(System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Exportar datos para análisis externo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GastosController.CrearGasto(GastosHogarAPI.Models.DTOs.CrearGastoRequest)">
+            <summary>
+            Crear un nuevo gasto
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GastosController.ObtenerGastosMes(System.Int32,System.Int32)">
+            <summary>
+            Obtener gastos del mes para el grupo del usuario
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GastosController.ObtenerTodosGastosMes(System.Int32,System.Int32)">
+            <summary>
+            Obtener todos los gastos (método legacy - mantener compatibilidad)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GastosController.ObtenerResumenMensual(System.Int32,System.Int32)">
+            <summary>
+            Obtener resumen mensual del grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GastosController.ObtenerResumenMensualGlobal(System.Int32,System.Int32)">
+            <summary>
+            Obtener resumen mensual global (método legacy)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GastosController.SubirFoto(System.Int32,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Subir foto de ticket (placeholder)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GastosController.ObtenerEstadisticasMesActual">
+            <summary>
+            Obtener estadísticas rápidas del mes actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GruposController.CrearGrupo(GastosHogarAPI.Models.DTOs.CrearGrupoRequest)">
+            <summary>
+            Crear un nuevo grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GruposController.UnirseGrupoCodigo(GastosHogarAPI.Models.DTOs.UnirseGrupoRequest)">
+            <summary>
+            Unirse a un grupo usando código de invitación
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GruposController.UnirseGrupoUsuario(GastosHogarAPI.Models.DTOs.UnirseGrupoUsuarioRequest)">
+            <summary>
+            Unirse al grupo de otro usuario
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GruposController.SalirGrupo">
+            <summary>
+            Salir del grupo actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GruposController.ObtenerMiembros">
+            <summary>
+            Obtener miembros del grupo actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GruposController.ObtenerMiGrupo">
+            <summary>
+            Obtener información del grupo actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.GruposController.RegenerarCodigo">
+            <summary>
+            Regenerar código de invitación (solo para creadores)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.LiquidacionController.ConfirmarGastos(GastosHogarAPI.Controllers.ConfirmarGastosRequest)">
+            <summary>
+            Confirmar gastos del mes actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.LiquidacionController.ConfirmarGastosMes(System.Int32,System.Int32)">
+            <summary>
+            Confirmar gastos para un mes específico
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.LiquidacionController.ObtenerEstado(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Obtener estado de liquidación actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.LiquidacionController.MarcarPagoRealizado(GastosHogarAPI.Controllers.MarcarPagoRequest)">
+            <summary>
+            Marcar pago como realizado
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.LiquidacionController.ConfirmarPagoRecibido(GastosHogarAPI.Controllers.ConfirmarPagoRequest)">
+            <summary>
+            Confirmar pago recibido
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.LiquidacionController.PuedeConfirmar(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Verificar si el usuario puede confirmar gastos
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.LiquidacionController.ObtenerPendientes(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Obtener resumen de confirmaciones pendientes
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.CrearPlanPago(GastosHogarAPI.Models.DTOs.CrearPlanPagoRequest)">
+            <summary>
+            Crear un nuevo plan de pago
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.ObtenerPlanesGrupo">
+            <summary>
+            Obtener planes de pago del grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.ObtenerMisPlanes">
+            <summary>
+            Obtener planes de pago del usuario actual
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.ObtenerDetallePlan(System.Int32)">
+            <summary>
+            Obtener detalle completo de un plan de pago
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.PagarCuota(GastosHogarAPI.Models.DTOs.PagarCuotaRequest)">
+            <summary>
+            Pagar una cuota específica
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.ConfirmarCuota(System.Int32)">
+            <summary>
+            Confirmar recepción de una cuota (para el acreedor)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.ObtenerCuotasPendientes">
+            <summary>
+            Obtener cuotas pendientes del usuario
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.CompletarPlan(System.Int32)">
+            <summary>
+            Completar un plan de pago manualmente
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.CancelarPlan(System.Int32)">
+            <summary>
+            Cancelar un plan de pago
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.ObtenerResumenPlanes">
+            <summary>
+            Obtener resumen de planes para el usuario
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Controllers.PlanPagoController.ObtenerEstadisticas">
+            <summary>
+            Obtener estadísticas de planes de pago del grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarUsuarioExisteAsync(System.Int32)">
+            <summary>
+            Valida que un usuario existe y está activo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarUsuarioPerteneceGrupoAsync(System.Int32,System.Int32)">
+            <summary>
+            Valida que un usuario pertenece a un grupo específico
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarGrupoExisteAsync(System.Int32)">
+            <summary>
+            Valida que un grupo existe y está activo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarCategoriaDisponibleAsync(System.Int32,System.Int32)">
+            <summary>
+            Valida que una categoría existe y está disponible para el grupo
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarGastoAccesoAsync(System.Int32,System.Int32)">
+            <summary>
+            Valida que un gasto existe y pertenece al grupo del usuario
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarPermisoModificarGastoAsync(System.Int32,System.Int32)">
+            <summary>
+            Valida que un usuario puede modificar un gasto (es el creador o admin)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarPlanPagoAccesoAsync(System.Int32,System.Int32)">
+            <summary>
+            Valida que un plan de pago existe y el usuario tiene acceso
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarCuotaAccesoAsync(System.Int32,System.Int32)">
+            <summary>
+            Valida que una cuota existe y el usuario puede interactuar con ella
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarPermisoPagarCuotaAsync(System.Int32,System.Int32)">
+            <summary>
+            Valida que un usuario puede pagar una cuota (es el deudor)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarPermisoConfirmarCuotaAsync(System.Int32,System.Int32)">
+            <summary>
+            Valida que un usuario puede confirmar una cuota (es el acreedor)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarCodigoInvitacionAsync(System.String)">
+            <summary>
+            Valida que un código de invitación es válido
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarPuedeUnirseGrupoAsync(System.Int32)">
+            <summary>
+            Valida que un usuario puede unirse a un grupo (no pertenece a otro)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarPuedeCrearGrupoAsync(System.Int32)">
+            <summary>
+            Valida que un usuario puede crear un grupo (no pertenece a otro)
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarLimitesGasto(System.Decimal,System.String)">
+            <summary>
+            Valida límites de negocio para gastos
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarLimitesPlanPago(System.Decimal,System.Int32,System.Int32)">
+            <summary>
+            Valida límites de negocio para planes de pago
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarParticipantesPlanPagoAsync(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Valida que los participantes de un plan de pago son válidos
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarPeriodo(System.Int32,System.Int32)">
+            <summary>
+            Valida que un período (mes/año) es válido
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarLiquidacionModificableAsync(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Valida que una liquidación puede ser modificada
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarEmailUnicoAsync(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Valida que un email es único en el sistema
+            </summary>
+        </member>
+        <member name="M:GastosHogarAPI.Services.BusinessValidationService.ValidarNombreCategoriaUnicoAsync(System.String,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Valida que un nombre de categoría es único en el contexto (grupo o predeterminadas)
+            </summary>
+        </member>
+        <member name="T:GastosHogarAPI.Migrations.AjusteRelacionPlanPagoEstadoMensual">
+            <inheritdoc />
+        </member>
+        <member name="M:GastosHogarAPI.Migrations.AjusteRelacionPlanPagoEstadoMensual.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GastosHogarAPI.Migrations.AjusteRelacionPlanPagoEstadoMensual.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GastosHogarAPI.Migrations.AjusteRelacionPlanPagoEstadoMensual.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:GastosHogarAPI.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:GastosHogarAPI.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GastosHogarAPI.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GastosHogarAPI.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Get``1(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>Attempts to bind the configuration instance to a new instance of type T.</summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.GetValue``1(Microsoft.Extensions.Configuration.IConfiguration,System.String)">
+            <summary>Extracts the value with the specified key and converts it to the specified type.</summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.ValidateConfigurationKeys(System.Type,System.Lazy{System.Collections.Generic.HashSet{System.String}},Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Configuration.BinderOptions)">
+            <summary>If required by the binder options, validates that there are no unknown keys in the input configuration object.</summary>
+        </member>
+    </members>
+</doc>

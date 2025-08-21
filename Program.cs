@@ -6,6 +6,7 @@ using GastosHogarAPI.Models;
 using GastosHogarAPI.Services;
 using GastosHogarAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -417,6 +418,14 @@ app.Logger.LogInformation("🌍 Entorno: {Environment}", app.Environment.Environ
 app.Logger.LogInformation("📊 Swagger disponible en: {SwaggerUrl}",
     app.Environment.IsDevelopment() ? app.Urls.FirstOrDefault() : "N/A");
 app.Logger.LogInformation("🏥 Health checks en: /health");
+
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
+
+// Configurar para escuchar en todas las interfaces
+app.Urls.Add("http://0.0.0.0:5008");
 
 // ===== EJECUTAR LA APLICACIÓN =====
 
